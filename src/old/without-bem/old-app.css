@@ -1,0 +1,414 @@
+
+body {
+    background: black;
+    font-family: Tahoma, sans-serif;
+}
+
+.wrapper {    
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.matrix-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.matrix-wrapper-for-start-page {
+    cursor: pointer;
+}
+
+.column {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.letter {
+    color: #0F0;
+    opacity: 0;
+}
+
+@keyframes backlight {   
+    from {
+      color: #0F0;              
+    }
+    to {
+      color: black;
+    }
+  }
+
+@keyframes trace {   
+    from {
+        color: palegreen;           
+    }
+    to {
+        color: black;
+    }
+}
+
+.letter-backlight-first {
+    animation: backlight 5.5s infinite;
+}
+
+.letter-backlight-second {
+    animation: backlight 2s;
+}
+
+.letter-mouse-trace {
+    animation: trace 1s;
+}
+
+@keyframes appear-page {   
+    from {
+        opacity: 0; 
+        width: 0%;          
+    }
+    to {
+        opacity: 0.75;
+        width: 75%;
+    }
+}
+
+.inner-wrapper {
+    background: palegreen;
+    top: 0;
+    /*height: 90vw;*/
+    margin: 0px 0px 10px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    box-shadow: 0 0 6px 5px black inset;
+    animation: appear-page 0.5s forwards;
+    animation-timing-function: ease-in;    
+}
+
+@keyframes show-logo-wrapper {   
+    from {
+        height: 0;        
+    }
+    to {
+        height: 40vh;
+    }
+}
+
+.logo-wrapper {    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 2vh 0;
+    border-bottom: 1px solid black;
+    animation: show-logo-wrapper 1s forwards;
+}
+
+.logo {
+    margin: 2vw 8vw 3vw 5vw;
+    perspective-origin: 50% 50%;
+    opacity: 0.5;
+}
+
+.container2 { 
+    perspective-origin: 50% 50%;
+    position: absolute;
+    display: none;
+}
+
+@keyframes move-triangle {
+    0% {
+        /*-webkit-transform: rotateY(45deg) rotateZ(45deg);
+        -moz-transform: rotateY(45deg) rotateZ(45deg);*/
+        transform: rotateX(-51deg) rotateY(127deg) rotateZ(28deg);
+        transform-origin: 50% 0%;
+    }
+    8% {
+        transform: rotateX(-4deg) rotateY(124deg) rotateZ(31deg);
+        transform-origin: 50% 0%;
+    } 
+    15%{
+        transform: rotateX(52deg) rotateY(129deg) rotateZ(35deg);
+        transform-origin: 61% 74%;
+    }
+    23% {
+        transform: rotateX(65deg) rotateY(179deg) rotateZ(-1deg);
+        transform-origin: 50% 100%;
+    }
+    32% {
+        transform: rotateX(58deg) rotateY(181deg) rotateZ(62deg);
+        transform-origin: 79% 124%;
+    }
+    40% {
+        transform: rotateX(63deg) rotateY(179deg) rotateZ(120deg);
+        transform-origin: 100% 100%;
+    }
+    50% {
+        transform: rotateX(52deg) rotateY(125deg) rotateZ(149deg);
+        transform-origin: 84% 68%;
+    }
+    60% {
+        transform: rotateX(125deg) rotateY(126deg) rotateZ(150deg);
+        transform-origin: 75% 50%;
+    }
+    70% {
+        transform: rotateX(116deg) rotateY(180deg) rotateZ(180deg);
+        transform-origin: 0% 100%;
+    }
+    80% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+        transform-origin: 0% 0%;
+    }
+    90% {
+        transform: rotateX(184deg) rotateY(124deg) rotateZ(151deg);
+        transform-origin: 68% 36%;
+    }
+    100% {
+        transform:  rotateX(132deg) rotateY(53deg) rotateZ(207deg);
+        transform-origin: 50% 0%;
+    }
+}
+
+.triangle2 {
+    width: 20vmin;
+    height: 17vmin;
+    line-height: 4em;
+    text-align: center;
+    font-size: 2em;
+    color: #0F0;
+    font-weight: bold;
+    transform-style: preserve-3d;   
+}
+
+@keyframes move-triangle1 {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    }
+}
+
+.triangle {
+    width: 20vmin;
+    height: 17vmin;
+    line-height: 4em;
+    text-align: center;
+    font-size: 2em;
+    color: #0F0;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transform:  rotateX(132deg) rotateY(53deg) rotateZ(207deg);
+    transform-origin: 50% 0%;
+    animation: move-triangle 10s 2s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.side {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 0;
+    height: 0;
+    border-left: 10vmin solid transparent;
+    border-right: 10vmin solid transparent;
+    border-bottom: 17vmin solid black;
+    opacity: 0.7;
+}
+
+.side span {
+    position: absolute;
+    margin: auto;
+}
+  
+.bottom {
+    transform: rotateX(70.53deg);
+    transform-origin: center bottom;
+}
+  
+.left {
+    transform: rotateY(68deg) rotateX(-29deg) rotateZ(-19deg);
+    transform-origin: center top;
+}
+
+.right {
+    transform: rotateY(-68deg) rotateX(-29deg) rotateZ(19deg);
+    transform-origin: center top;
+}
+
+span .caption-letter {
+    color: #036f03;
+    font-size: 1.2em;
+}
+
+@keyframes appear-content {   
+    from {
+        opacity: 0;          
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.page {
+    width: 90%;
+    animation: appear-content 1s;
+    /*animation-timing-function: ease-in;*/
+}
+
+.content {
+    margin: 25px 0 20px 0;
+}
+
+.layer {
+    height: 100vh;
+}
+
+h1, h2, .menu a, .triangle {
+    font-variant: small-caps;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    line-height: 50px;
+    font-weight: bold;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.menu a span {
+	position: relative;
+    display: inline-block;
+    width: 16vw;
+    color: black;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+.menu a span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+    height: 100%;
+    color: #0F0;
+    background: black;
+    opacity: 0.8;   
+    box-shadow: 0 0 1px 1px #fafff5 inset;
+	content: attr(data-hover);
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.menu a:hover span,
+.menu a:focus span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+.menu .active-link span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+h2 {
+    color: #0F0;
+}
+
+@keyframes change-black-color {   
+    from {
+        color: #0F0;          
+    }
+    to {
+        color: black;
+    }
+}
+
+.black-color-animate {
+    animation: change-black-color 2s forwards;
+}
+
+/*h2:hover {
+    animation: change-black-color 1s infinite forwards;
+}*/
+
+@keyframes from-black-to-palegreen-color {   
+    from {
+        color: black;          
+    }
+    to {
+        color: palegreen;
+    }
+}
+
+.blinking-cursor {
+    color: black;
+    animation: from-black-to-palegreen-color 0.5s infinite alternate;
+}
+
+@keyframes content-appear {   
+    from {
+        opacity: 0;        
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.description-appear {
+    animation: content-appear 2s forwards;
+}
+
+.description p {
+    text-align: justify;
+}
+
+a {
+    color: seagreen;
+}
+
+
+
+
+
+
+
+

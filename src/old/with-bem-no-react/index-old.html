@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MySite</title>
+        <meta name="Keywords" content="">
+        <meta name="Description" content="">
+        
+        <link rel="stylesheet" href="./bem-css/app-bem.css">
+    </head>
+
+    <body>
+        <noscript>
+            You need to enable JavaScript to run this app.
+            Включите поддержку JavaScript в своём браузере для корректного отображения страницы.
+        </noscript>
+
+        <!--div id="root"></div>
+        <script src="./bundle.js"></script-->
+            
+        <div class="page">
+
+            <div class="matrix-background page__matrix-background matrix-background_clickable"></div>
+            
+            <div class="content page__content content_hidden">
+                <div class="header content__header">
+                    <div class="logo header__logo">
+                        <div class="triangle">
+                            <div class="triangle__side triangle__side_left">e</div>
+                            <div class="triangle__side triangle__side_bottom">e</div>
+                            <div class="triangle__side triangle__side_right">k</div>           
+                            <div class="triangle__side triangle__side_front">i</div>
+                        </div>
+                    </div>
+                    
+                    <div class="header__title">
+                        <h1><span class="header__title_caption-letter">С</span>айт&#8209;портфолио <span class="header__title_caption-letter">В</span>еб&#8209;разработчика</h1>
+                    </div>
+                </div>
+
+                <div class="menu">
+                        <div class="menu__item js-item-about">
+                            <div class="item-decor" data-hover="Обо мне">Обо мне</div>
+                        </div>
+                        <div class="menu__item js-item-summary">
+                            <div class="item-decor" data-hover="Резюме">Резюме</div>
+                        </div>
+                        <div class="menu__item js-item-works">
+                            <div class="item-decor" data-hover="Портфолио">Портфолио</div>
+                        </div>
+                        <div class="menu__item js-item-contacts">
+                            <div class="item-decor" data-hover="Контакты">Контакты</div>
+                        </div>
+                    </div>
+    
+                <div class="content__sections">  
+                    <div class="section js-section-about section_active">
+                        <h2 class="section__heading" hidden-text="Hello World!"><span class="section__heading_blinking">_</span></h2>                    
+                        <div class="section__description section__description_shown">
+                            Здравствуйте, меня зовут Виктория Дрёмина.
+                            <p>Я занимаюсь веб-разработкой (front&#8209end и back&#8209end), а также пишу Desktop&#8209приложения на C#.</p>
+                            <p>Здесь вы сможете найти краткое описание моей деятельности и примеры моих работ.</p>
+                        </div>
+                        <div class="section__description section__description_hidden">
+                            <p>В своей работе я использую следующие инструменты разработки сайта: Javascript / HTML(5) / CSS(3) / SQL. 
+                            На стороне фронтэнда применяю препроцессор CSS LESS, библиотеку React.js, владею секретами адаптивной верстки.
+                            В части бэкэнда применяю платформу Node.js, СУБД MySQL.</p>   
+                            <p>При создании десктопных приложений под Windows на языке С# использую:
+                            библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Крепко дружу с платформой .Net Framework 4.6.</p>                 
+                            <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. 
+                            Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
+                        </div>  
+                    </div>
+                    
+                    <div class="section js-section-summary section_hidden">
+                        <h2 class="section__heading" hidden-text="Образование"></h2>                         
+                        <div class="section__description section__description_hidden">
+                            <p>Московский государственный технический университет им. Н.Э. Баумана, Москва, 2015г.</p>
+                            <p>Приборостроительный факультет, кафедра «Приборы и системы ориентации, стабилизации и навигации» (ИУ2-ПС1)</p>
+                            <p>Квалификация - магистр.</p>
+                        </div>  
+                        <h2 class="section__heading" hidden-text="Повышение квалификации, курсы"></h2>                         
+                        <div class="section__description section__description_hidden">
+                            <p>Учебный центр при МГТУ им. Н.Э.Баумана "Специалист", Курсы Microsoft, 2016г.</p>
+                            <p>Курс М20483: Программирование на C#.</p>
+                        </div>
+                    </div>
+
+                    <div class="section js-section-works section_hidden">
+                        <h2 class="section__heading" hidden-text="Портфолио"></h2>                       
+                        <div class="section__description section__description_hidden">
+                            <p>Здесь представлены мои работы:</p>
+                        </div>
+                    </div>
+                    
+                    <div class="section js-section-contacts section_hidden">
+                        <h2 class="section__heading" hidden-text="Контактная информация"></h2>     
+                        <div class="section__description section__description_hidden">
+                            <p>Телефон: <a href="tel:+79629750419">+7 (962) 975 04 19</a></p>
+                            <p>E-mail: <a href="mailto:ifirtree@gmail.com">ifirtree@gmail.com</a></p>
+                            <p>Skype: <a href="skype:live:ifirtree"> live:ifirtree</a></p>
+                        </div>
+                    </div>                   
+                </div>               
+            </div>     
+        </div>
+        
+        <script src="./app-no-react.js"></script>
+
+    </body>
+</html>
