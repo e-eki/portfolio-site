@@ -5,7 +5,7 @@
   "main": "hello.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "lessc /Портфолио/Site/src/less/main.less /Портфолио/Site/src/main.css",
+    "build-css": "lessc ./src/less/main.less ./public/main.css",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "server": "webpack-dev-server --mode development --hot",

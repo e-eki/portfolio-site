@@ -21,7 +21,7 @@ export default class Content extends Component {
         const contentClass = 'content ' + (this.props.className ? this.props.className : '');
         
         return (
-            <div ref={elem => this.content = elem} className = {contentClass}>
+            <div className = {contentClass}>
                 {this.header}
                 {this.main}
                 {this.footer}

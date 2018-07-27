@@ -3,3 +3,5 @@ node_modules
 
 /public/main.css
 /public/bundle.js
+
+.vscode
