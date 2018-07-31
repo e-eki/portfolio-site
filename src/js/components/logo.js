@@ -41,11 +41,11 @@ export default class Logo extends Component {
         
         return (
             <div className = {logoClass}>
-                <div  ref={elem => this.triangle = elem} class = 'triangle'>
-                    <div class="triangle__side triangle__side_left">{this.state.turningVariant[0]}</div>
-                    <div class="triangle__side triangle__side_bottom">{this.state.turningVariant[1]}</div>
-                    <div class="triangle__side triangle__side_right">{this.state.turningVariant[2]}</div>           
-                    <div class="triangle__side triangle__side_front">{this.state.turningVariant[3]}</div>
+                <div  ref={elem => this.triangle = elem} className = 'triangle'>
+                    <div className="triangle__side triangle__side_left">{this.state.turningVariant[0]}</div>
+                    <div className="triangle__side triangle__side_bottom">{this.state.turningVariant[1]}</div>
+                    <div className="triangle__side triangle__side_right">{this.state.turningVariant[2]}</div>           
+                    <div className="triangle__side triangle__side_front">{this.state.turningVariant[3]}</div>
                 </div>
             </div>
         )

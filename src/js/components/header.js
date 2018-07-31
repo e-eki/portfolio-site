@@ -12,8 +12,8 @@ export default class Header extends Component {
             <div className = {headerClass}>
                 <Logo className = 'header__logo '/>
 
-                 <div class="header__title">
-                    <h1><span class="header__title_caption-letter">С</span>айт&#8209;портфолио <span class="header__title_caption-letter">В</span>еб&#8209;разработчика</h1>
+                 <div className = "header__title">
+                    <h1><span className = "header__title_caption-letter">С</span>айт&#8209;портфолио <span className = "header__title_caption-letter">В</span>еб&#8209;разработчика</h1>
                 </div>
             </div>
         )

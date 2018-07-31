@@ -16,14 +16,14 @@ export default class Section extends Component {
         
         return (
             <div className = {sectionClass}>
-                <h2 class="section__heading" num = {this.props.num} hidden-text = {this.props.hiddenText}>
+                <h2 className ="section__heading" num = {this.props.num} hidden-text = {this.props.hiddenText}>
                     {this.props.heading}
-                    <span class="section__heading_blinking">_</span>
+                    <span className ="section__heading_blinking">_</span>
                 </h2>                    
-                <div class="section__description section__description_shown">
+                <div className ="section__description section__description_shown">
                     {(this.props.shownDescription) ? this.props.shownDescription : ''}
                 </div>
-                <div class="section__description section__description_hidden">
+                <div className ="section__description section__description_hidden">
                     {this.props.hiddenDescription}
                 </div>                    
             </div>

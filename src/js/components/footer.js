@@ -10,7 +10,7 @@ export default class Footer extends Component {
         return (
             <div className = {footerClass}>
 
-                 <div class="footer__title">
+                 <div className ="footer__title">
                     &#169; В. А. Дремина, 2018
                 </div>
             </div>

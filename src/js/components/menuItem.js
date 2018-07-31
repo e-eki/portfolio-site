@@ -15,7 +15,7 @@ export default class MenuItem extends Component {
         
         return (
             <div className = {menuClass}>
-                <div class = "item-decor" data-hover = {this.props.text}>
+                <div className = "item-decor" data-hover = {this.props.text}>
                     {this.props.text}
                 </div>
             </div>
