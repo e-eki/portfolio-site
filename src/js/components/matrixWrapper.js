@@ -330,7 +330,7 @@ export default class MatrixWrapper extends Component {
         // или по скроллу
         addEventListener("scroll", this.showContent);
         // или если ничего не происходит, то по таймауту
-        //this.showContentClock = setTimeout(this.showContent, 5000);     //!!!!!
+        this.showContentClock = setTimeout(this.showContent, 10000);     //TODO!!!!!
     }
 
     componentDidUpdate(prevProps, prevState) {
