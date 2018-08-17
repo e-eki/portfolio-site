@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 const argv = require('yargs').argv;
 const isDevelopment = argv.mode === 'development';
@@ -36,6 +37,16 @@ module.exports = {
                       options: {
                         minimize: isProduction
                       }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer({
+                                    browsers:['ie >= 8', 'last 4 version']
+                                })
+                            ]
+                        }
                     },
                     'less-loader',
                     //'resolve-url-loader' //??
