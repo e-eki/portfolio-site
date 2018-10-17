@@ -11,12 +11,12 @@ class Column extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        //console.log('shouldComponentUpdate');
+        ////console.log('shouldComponentUpdate');
         return (this.props.columnContent.length !== 0);
     }
 
     render() {
-        //console.log('========render column');
+        ////console.log('========render column');
         return (
             <div className="matrix__column">
                 {this.props.columnContent}
@@ -36,12 +36,12 @@ class Letter extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        //console.log('letter shouldComponentUpdate');
+        ////console.log('letter shouldComponentUpdate');
         return (nextProps.opacity !== this.props.opacity || nextProps.class !== this.props.class);
     }
     
     render() {
-        //console.log('render letter');
+        ////console.log('render letter');
         const letterStyle = { opacity: this.props.opacity };
         
         return <div className={this.props.class} style={letterStyle}>{this.props.letterContent}</div>;
@@ -126,7 +126,7 @@ export default class MatrixWrapper extends Component {
 
     //заполнение страницы символами
     fillMatrix() {
-        //console.log('fillMatrix');
+        ////console.log('fillMatrix');
         var matrix = [];
         // уникальный ключ для каждого символа
         var letterKey = 0;
@@ -142,6 +142,8 @@ export default class MatrixWrapper extends Component {
                 for (var y = this.firstRow; y < this.rows; y++) {
 
                     columnContent.push(<Letter key={letterKey} letterContent={this.state.lettersDataContainer[x][y].letterContent} opacity={this.state.lettersDataContainer[x][y].opacity} class={this.state.lettersDataContainer[x][y].class}/>);
+
+                    letterKey++;
                 }
             }             
             matrix.push(<Column key={x} columnContent={columnContent}></Column>);
@@ -284,7 +286,7 @@ export default class MatrixWrapper extends Component {
     }
 
     showContent(event) {
-        console.log('****');
+        //console.log('****');
 
         // проверка на случай, если несколько событий одновременно, не добавилось несколько раз
         if (!this.state.isStartPage) return; 
@@ -294,7 +296,7 @@ export default class MatrixWrapper extends Component {
             scrollToComponent(this.matrixElt, {align: 'top'});
             return;
         }
-        console.log(event);
+        //console.log(event);
         
         // отображаем контент
         this.content = <Content className = 'content_shown'/>;
@@ -317,7 +319,7 @@ export default class MatrixWrapper extends Component {
     }
 
     componentDidMount() {
-        //console.log('componentDidMount');
+        ////console.log('componentDidMount');
 
         // добавляем след от движения мыши
         this.matrixElt.addEventListener("mousemove", this.drawMouseTrackForStartPage);
@@ -330,7 +332,7 @@ export default class MatrixWrapper extends Component {
         // или по скроллу
         addEventListener("scroll", this.showContent);
         // или если ничего не происходит, то по таймауту
-        this.showContentClock = setTimeout(this.showContent, 10000);     //TODO!!!!!
+        this.showContentClock = setTimeout(this.showContent, 20000);     //TODO!!!!!
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -342,7 +344,7 @@ export default class MatrixWrapper extends Component {
 
     render() 
     {
-        //console.log('----------------------render------------------------');
+        ////console.log('----------------------render------------------------');
         const matrix = this.fillMatrix();  
         const matrixClass = 'matrix matrix-wrapper__matrix ' + (this.state.isStartPage ? 'matrix_start-page' : 'matrix_home-page');
         const matrixStyle = {fontSize: this.fontSize};

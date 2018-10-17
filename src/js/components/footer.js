@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
 
     render() {
-        console.log('render footer');
+        //console.log('render footer');
         const footerClass = 'footer ' + (this.props.className ? this.props.className : '');
         
         return (

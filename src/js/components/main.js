@@ -29,14 +29,17 @@ export default class Main extends Component {
                         shownDescription:
                             <div>
                                 <p>Здравствуйте, меня зовут Виктория Дрёмина.</p>
-                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), а также пишу Desktop&#8209;приложения на C#.</p>
+                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), а в прошлом разработчик Desktop&#8209;приложений на C#.</p>
                                 <p>Здесь вы сможете найти краткое описание моей деятельности и примеры моих работ.</p>
                             </div>
                         ,
                         hiddenDescription: 
                             <div>
-                                <p>В своей работе я использую следующие инструменты разработки сайта: Javascript / HTML(5) / CSS(3) / SQL. На стороне фронтэнда применяю препроцессор LESS, библиотеку React.js, владею секретами адаптивной/отзывчивой кроссбраузерной верстки. В части бэкэнда применяю платформу Node.js, СУБД MySQL.'</p>  
-                                <p>При создании десктопных приложений под Windows на языке С# использую: библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Крепко дружу с платформой .Net Framework 4.6.</p>                 
+                                <p>В своей работе я использую следующие инструменты разработки сайта: Javascript / HTML(5) / CSS(3) / MongoDB / MySQL.</p> 
+                                <p>Для фронтэнда применяю библиотеку React.js, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для сборки использую Webpack.</p> 
+                                <p>А для бэкэнда применяю платформу Node.js, СУБД MongoDB и MySQL. Знаю (но пока не имею опыта применения на практике) принципы Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
+                                <p></p>
+                                <p>При создании десктопных приложений под Windows на языке С# использую: библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Работаю с платформой .Net Framework 4.6.</p>                 
                                 <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
                             </div>
                     }
@@ -77,6 +80,20 @@ export default class Main extends Component {
                         hiddenDescription: 
                             <div>
                                 <p>Здесь представлены мои работы:</p>
+
+                                <div className = 'section__description-heading'>На JS</div>
+
+                                
+
+                                <img
+                                    name = "site"
+                                    className = 'section__img' 
+                                    alt = 'сайт-визитка'
+                                    title = 'сайт-визитка'
+                                    >
+                                </img>
+
+                                <div className = 'section__description-heading'>На C#</div>
                             </div>
                     }
                 ]
@@ -94,6 +111,8 @@ export default class Main extends Component {
                                 <p>Телефон: <a href="tel:+79629750419">+7 (962) 975 04 19</a></p>
                                 <p>E-mail: <a href="mailto:ifirtree@gmail.com">ifirtree@gmail.com</a></p>
                                 <p>Skype: <a href="skype:live:ifirtree"> live:ifirtree</a></p>
+                                <p>Я <a href="https://github.com/e-eki">на GitHub</a></p>
+                                <p>Я <a href="https://ru.stackoverflow.com/users/301638/eeki">на Stack Overflow</a> :)</p>
                             </div>
                     }
                 ]
@@ -240,27 +259,35 @@ export default class Main extends Component {
     }
 
     render() {
-        console.log('render main');
+        //console.log('render main');
         const mainClass = 'main ' + (this.props.className ? this.props.className : '');
 
         var items = [];
         //var sections = [];
         var blocks = [];
+        let itemKey = 0;
+        let sectionKey = 0;
+        let blockKey = 0;
 
         this.info.forEach(function(infoElt) {    
 
-            var item = <MenuItem className = {infoElt.itemName} text = {infoElt.itemText}/>;           
+            var item = <MenuItem key={itemKey} className = {infoElt.itemName} text = {infoElt.itemText}/>; 
+            itemKey++;
+
             var sections = [];
 
             infoElt.sections.forEach(function(sectionElt) {
 
-                var section = <Section num = {sectionElt.hiddenText.num} hiddenText = {sectionElt.hiddenText.text} heading = {this.state.sectionsHeadings[sectionElt.hiddenText.num]} shownDescription = {sectionElt.shownDescription} hiddenDescription = {sectionElt.hiddenDescription}/>;                
+                var section = <Section key={sectionKey} num = {sectionElt.hiddenText.num} hiddenText = {sectionElt.hiddenText.text} heading = {this.state.sectionsHeadings[sectionElt.hiddenText.num]} shownDescription = {sectionElt.shownDescription} hiddenDescription = {sectionElt.hiddenDescription}/>;
+                sectionKey++;
+
                 sections.push(section);
             }.bind(this));
 
-            var block = <div className = {"main__block " + infoElt.blockName}>
+            var block = <div key={blockKey} className = {"main__block " + infoElt.blockName}>
                             {sections}
                         </div>;
+            blockKey++;
 
             items.push(item);
             blocks.push(block);
