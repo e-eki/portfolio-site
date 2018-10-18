@@ -5,7 +5,7 @@ import Logo from './logo';
 export default class Header extends Component {
 
     render() {
-        console.log('render header');
+        //console.log('render header');
         const headerClass = 'header ' + (this.props.className ? this.props.className : '');
         
         return (

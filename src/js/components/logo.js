@@ -35,7 +35,7 @@ export default class Logo extends Component {
     }
 
     render() {
-        console.log('render logo');
+        //console.log('render logo');
 
         const logoClass = 'logo ' + (this.props.className ? this.props.className : '');
         
