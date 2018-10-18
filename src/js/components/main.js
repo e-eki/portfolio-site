@@ -29,7 +29,7 @@ export default class Main extends Component {
                         shownDescription:
                             <div>
                                 <p>Здравствуйте, меня зовут Виктория Дрёмина.</p>
-                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), а в прошлом разработчик Desktop&#8209;приложений на C#.</p>
+                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), а в прошлом разработчик приложений на C#.</p>
                                 <p>Здесь вы сможете найти краткое описание моей деятельности и примеры моих работ.</p>
                             </div>
                         ,
@@ -39,7 +39,7 @@ export default class Main extends Component {
                                 <p>Для фронтэнда применяю библиотеку React.js, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для сборки использую Webpack.</p> 
                                 <p>А для бэкэнда применяю платформу Node.js, СУБД MongoDB и MySQL. Знаю (но пока не имею опыта применения на практике) принципы Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
                                 <p></p>
-                                <p>При создании десктопных приложений под Windows на языке С# использую: библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Работаю с платформой .Net Framework 4.6.</p>                 
+                                <p>При создании Desktop&#8209;приложений под Windows на языке С# использую: библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Работаю с платформой .Net Framework 4.6.</p>                 
                                 <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
                             </div>
                     }
@@ -81,19 +81,72 @@ export default class Main extends Component {
                             <div>
                                 <p>Здесь представлены мои работы:</p>
 
-                                <div className = 'section__description-heading'>На JS</div>
+                                <div className = 'section__description-heading'>НА JS</div>
 
-                                
+                                <div className = 'section__description-inner'>
 
-                                <img
-                                    name = "site"
-                                    className = 'section__img' 
-                                    alt = 'сайт-визитка'
-                                    title = 'сайт-визитка'
-                                    >
-                                </img>
+                                    <div className = 'picture-block'>
+     
+                                        <div className = 'picture-block__heading'>Сайт-портфолио</div>
 
-                                <div className = 'section__description-heading'>На C#</div>
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/portfolio-site">
+                                                <div
+                                                    className = 'image image_site' 
+                                                    alt = 'сайт-визитка'
+                                                    >
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                        <p>Repository: <a href = "https://github.com/e-eki/portfolio-site">https://github.com/e-eki/portfolio-site</a></p>
+                                        <p>Published at: <a href = "https://e-eki.github.io/">https://e-eki.github.io/</a></p>
+                                    </div>
+
+                                    <div className = 'picture-block'>
+
+                                        <div className = 'picture-block__heading'>Игра в шашки</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/checkers-project">
+                                                <div
+                                                    className = 'image image_checkers' 
+                                                    alt = 'игра в шашки'
+                                                    >
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <p>Repository: <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
+                                        <p><a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
+                                        <p>Published at: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
+                                    </div>
+
+                                </div>
+
+                                <div className = 'section__description-heading'>НА C#</div>
+
+                                <div className = 'section__description-inner'>
+
+                                    <div className = 'picture-block'>
+
+                                        <div className = 'picture-block__heading'>Программа подсчета времени наработки контрольно-проверочной аппаратуры (КПА) и приборов</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/time_counting_app">
+                                                <div
+                                                    className = 'image image_timer' 
+                                                    alt = 'программа подсчета времени наработки'
+                                                    >
+                                                </div>
+                                            </a>
+                                        </div>
+                                    
+                                        <p>Repository: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
+                                    </div>
+
+                                </div>
+
                             </div>
                     }
                 ]
