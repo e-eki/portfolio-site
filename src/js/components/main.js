@@ -99,8 +99,8 @@ export default class Main extends Component {
                                             </a>
                                         </div>
                                         
-                                        <p>Repository: <a href = "https://github.com/e-eki/portfolio-site">https://github.com/e-eki/portfolio-site</a></p>
-                                        <p>Published at: <a href = "https://e-eki.github.io/">https://e-eki.github.io/</a></p>
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/portfolio-site">https://github.com/e-eki/portfolio-site</a></p>
+                                        <p>Опубликован тут: <a href = "https://e-eki.github.io/">https://e-eki.github.io/</a></p>
                                     </div>
 
                                     <div className = 'picture-block'>
@@ -117,9 +117,9 @@ export default class Main extends Component {
                                             </a>
                                         </div>
 
-                                        <p>Repository: <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
                                         <p><a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
-                                        <p>Published at: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
+                                        <p>Опубликован тут: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
                                     </div>
 
                                 </div>
@@ -142,7 +142,7 @@ export default class Main extends Component {
                                             </a>
                                         </div>
                                     
-                                        <p>Repository: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
                                     </div>
 
                                 </div>
