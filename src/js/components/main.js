@@ -36,8 +36,8 @@ export default class Main extends Component {
                         hiddenDescription: 
                             <div>
                                 <p>В своей работе я использую следующие инструменты разработки сайта: Javascript / HTML(5) / CSS(3) / MongoDB / MySQL.</p> 
-                                <p>Для фронтэнда применяю библиотеку React.js, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для сборки использую Webpack.</p> 
-                                <p>А для бэкэнда применяю платформу Node.js, СУБД MongoDB и MySQL. Знаю (но пока не имею опыта применения на практике) принципы Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
+                                <p>Для фронтэнда применяю библиотеку React.js, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для организации стилей применяю принципы БЭМ-методологии. Для сборки использую Webpack. </p> 
+                                <p>А для бэкэнда применяю платформу Node.js, СУБД MongoDB и MySQL. При разработке API использую принципы REST-архитектуры. Для интеграции с соцсетями использую протокол авторизации OAuth 2.0. Знаю (но пока не имею опыта применения на практике) принципы Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
                                 <p></p>
                                 <p>При создании Desktop&#8209;приложений под Windows на языке С# использую: библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Работаю с платформой .Net Framework 4.6.</p>                 
                                 <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
@@ -99,8 +99,8 @@ export default class Main extends Component {
                                             </a>
                                         </div>
                                         
-                                        <p>Repository: <a href = "https://github.com/e-eki/portfolio-site">https://github.com/e-eki/portfolio-site</a></p>
-                                        <p>Published at: <a href = "https://e-eki.github.io/">https://e-eki.github.io/</a></p>
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/portfolio-site">https://github.com/e-eki/portfolio-site</a></p>
+                                        <p>Опубликован тут: <a href = "https://e-eki.github.io/">https://e-eki.github.io/</a></p>
                                     </div>
 
                                     <div className = 'picture-block'>
@@ -117,9 +117,9 @@ export default class Main extends Component {
                                             </a>
                                         </div>
 
-                                        <p>Repository: <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
                                         <p><a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
-                                        <p>Published at: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
+                                        <p>Опубликован тут: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
                                     </div>
 
                                 </div>
@@ -142,7 +142,7 @@ export default class Main extends Component {
                                             </a>
                                         </div>
                                     
-                                        <p>Repository: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
                                     </div>
 
                                 </div>
