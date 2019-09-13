@@ -1,3 +1,4 @@
+'use strict';
 
 import React, { Component } from 'react';
 import scrollToComponent from 'react-scroll-to-component';
@@ -25,7 +26,10 @@ export default class Main extends Component {
                 blockName: 'js-block-about main__block_active',
                 sections: [
                     {
-                        hiddenText: {text:'Hello World!'},
+                        hiddenText: {
+                            text:'Hello World!',
+                            num: null,
+                        },
                         shownDescription:
                             <div>
                                 <p>Здравствуйте, меня зовут Виктория Дрёмина.</p>
@@ -52,7 +56,10 @@ export default class Main extends Component {
                 blockName: 'js-block-summary main__block_hidden',
                 sections: [
                     {
-                        hiddenText: {text: 'Образование'},
+                        hiddenText: {
+                            text: 'Образование',
+                            num: null,
+                        },
                         hiddenDescription: 
                             <div>
                                 <p>Московский государственный технический университет им. Н.Э. Баумана, Москва, 2015г.</p>
@@ -76,7 +83,10 @@ export default class Main extends Component {
                 blockName: 'js-block-works main__block_hidden',
                 sections: [
                     {
-                        hiddenText: {text: 'Портфолио'},
+                        hiddenText: {
+                            text: 'Портфолио',
+                            num: null,
+                        },
                         hiddenDescription: 
                             <div>
                                 <p>Здесь представлены мои работы:</p>
@@ -158,7 +168,10 @@ export default class Main extends Component {
                 blockName: 'js-block-contacts main__block_hidden',
                 sections: [
                     {
-                        hiddenText: {text: 'Контактная информация'},
+                        hiddenText: {
+                            text: 'Контактная информация',
+                            num: null,
+                        },
                         hiddenDescription: 
                             <div>
                                 <p>Телефон: <a href="tel:+79629750419">+7 (962) 975 04 19</a></p>
@@ -174,16 +187,13 @@ export default class Main extends Component {
         ];
 
         // устанавливаем соответствие hiddenText каждой секции - элементу массива sectionsHeadings
-        this.info.forEach(function(infoElt) {
-
-            infoElt.sections.forEach(function(sectionElt) {
-
+        this.info.forEach(function(infoItem) {
+            infoItem.sections.forEach(function(sectionItem) {
                 // num нужен для соответствия строке массива sectionsHeadings
-                sectionElt.hiddenText.num = this.state.sectionsHeadings.length; 
-                // добавляем новй жлемент массива для этого hiddenText  
+                sectionItem.hiddenText.num = this.state.sectionsHeadings.length; 
+                // добавляем новый элемент массива для этого hiddenText  
                 this.sectionsHeadings.push(''); 
-            }.bind(this));
-            
+            }.bind(this));            
         }.bind(this));
 
         // массив соответствий пунктов меню секциям
@@ -197,30 +207,31 @@ export default class Main extends Component {
     // и отрисовываем заголовок (если еще не отрисован)
     showActiveBlock(event) {
 
-        var showActiveSection = function(section) {
-
+        const showActiveSection = function(section) {
             // в каждой секции ищем заголовок и описание
-            for (var i = 0; i < section.childNodes.length; i++) {                  
-                var elt = section.childNodes[i];
+            for (let i = 0; i < section.childNodes.length; i++) {                  
+                const item = section.childNodes[i];
 
-                    // отрисовываем заголовок
-                if (elt.classList && elt.classList.contains("section__heading") &&
-                    !elt.classList.contains("section__heading_shown")) {
-
-                        this.setDrawHeadingTimer(elt); 
+                // отрисовываем заголовок
+                if (item.classList && item.classList.contains("section__heading") &&
+                    !item.classList.contains("section__heading_shown")) {
+                        this.setDrawHeadingTimer(item); 
                 }
 
                 // отображаем описание
-                else if (elt.classList && elt.classList.contains("section__description")
-                    && elt.classList.contains("section__description_hidden")) {
+                else if (item.classList && item.classList.contains("section__description")
+                    && item.classList.contains("section__description_hidden")) {
 
-                        elt.classList.remove("section__description_hidden");
-                        elt.classList.add("section__description_shown");
+                        item.classList.remove("section__description_hidden");
+                        item.classList.add("section__description_shown");
                 }
             }
         }.bind(this);
 
-        if (event.target.classList.contains('menu__item_active')) return;  //если кликают по активной ссылке
+        //если кликают по активной ссылке
+        if (event.target.classList.contains('menu__item_active')) {
+            return; 
+        }
 
         this.elements.forEach(function(element) {
             // прячем все блоки
@@ -234,25 +245,24 @@ export default class Main extends Component {
                 element.block.classList.remove('main__block_hidden');
                 element.block.classList.add('main__block_active');
 
-                // отскролливаем меню вверх
+                // проскролливаем меню вверх
                 scrollToComponent(this.menu, {align: 'top'});
 
                 //ищем секции в активном блоке
                 for (var i = 0; i < element.block.childNodes.length; i++) {                   
-                    var elt = element.block.childNodes[i];
+                    var item = element.block.childNodes[i];
 
-                    if (elt.classList && elt.classList.contains("section")) 
-                        showActiveSection(elt);
+                    if (item.classList && item.classList.contains("section")) 
+                        showActiveSection(item);
                 }
             }
         }.bind(this));
     }
 
     // отрисовка заголовка активной секции
-    setDrawHeadingTimer(element) { 
-        
-        var num = element.getAttribute("num");
-        var header = element.getAttribute("hidden-text");                     
+    setDrawHeadingTimer(element) {         
+        const num = element.getAttribute("num");
+        const header = element.getAttribute("hidden-text");                     
         var counter = 0;
 
         var drawHeading = function() {
@@ -349,7 +359,7 @@ export default class Main extends Component {
         
         return (
             <div className = {mainClass}>
-                <div  ref={elem => this.menu = elem} className = 'menu'>
+                <div ref={elem => this.menuRef = elem} className = 'menu'>
                     {items}
                 </div>
                 <div className = 'main__inner'>         
