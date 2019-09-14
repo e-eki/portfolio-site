@@ -6,7 +6,6 @@ export default class MenuItem extends Component {
 
     shouldComponentUpdate(nextProps) {
         //console.log('shouldComponentUpdate item');
-
         return false;
     }
 

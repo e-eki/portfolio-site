@@ -199,6 +199,7 @@ export default class Main extends Component {
         // массив соответствий пунктов меню секциям
         this.elements = [];
 
+        this.showActiveSection = this.showActiveSection.bind(this);
         this.showActiveBlock = this.showActiveBlock.bind(this);
         this.setDrawHeadingTimer = this.setDrawHeadingTimer.bind(this);
     }
@@ -206,28 +207,6 @@ export default class Main extends Component {
     // обработчик события клика по пункту меню - показываем соответствующий блок
     // и отрисовываем заголовок (если еще не отрисован)
     showActiveBlock(event) {
-
-        const showActiveSection = function(section) {
-            // в каждой секции ищем заголовок и описание
-            for (let i = 0; i < section.childNodes.length; i++) {                  
-                const item = section.childNodes[i];
-
-                // отрисовываем заголовок
-                if (item.classList && item.classList.contains("section__heading") &&
-                    !item.classList.contains("section__heading_shown")) {
-                        this.setDrawHeadingTimer(item); 
-                }
-
-                // отображаем описание
-                else if (item.classList && item.classList.contains("section__description")
-                    && item.classList.contains("section__description_hidden")) {
-
-                        item.classList.remove("section__description_hidden");
-                        item.classList.add("section__description_shown");
-                }
-            }
-        }.bind(this);
-
         //если кликают по активной ссылке
         if (event.target.classList.contains('menu__item_active')) {
             return; 
@@ -246,26 +225,49 @@ export default class Main extends Component {
                 element.block.classList.add('main__block_active');
 
                 // проскролливаем меню вверх
-                scrollToComponent(this.menu, {align: 'top'});
+                scrollToComponent(this.menuRef, {align: 'top'});
 
-                //ищем секции в активном блоке
+                // ищем секции в активном блоке
                 for (var i = 0; i < element.block.childNodes.length; i++) {                   
                     var item = element.block.childNodes[i];
 
                     if (item.classList && item.classList.contains("section")) 
-                        showActiveSection(item);
+                        this.showActiveSection(item);
                 }
             }
         }.bind(this));
     }
 
-    // отрисовка заголовка активной секции
+    // отобразить секцию активного блока
+    showActiveSection(section) {
+        // в секции ищем заголовок и описание
+        for (let i = 0; i < section.childNodes.length; i++) {                  
+            const item = section.childNodes[i];
+
+            // отрисовываем заголовок
+            if (item.classList && item.classList.contains("section__heading") &&
+                !item.classList.contains("section__heading_shown")) {
+                    this.setDrawHeadingTimer(item); 
+            }
+
+            // отображаем описание
+            else if (item.classList && item.classList.contains("section__description")
+                && item.classList.contains("section__description_hidden")) {
+
+                    item.classList.remove("section__description_hidden");
+                    item.classList.add("section__description_shown");
+            }
+        }
+    }
+
+    // установка таймера отрисовки заголовка активной секции
     setDrawHeadingTimer(element) {         
         const num = element.getAttribute("num");
         const header = element.getAttribute("hidden-text");                     
-        var counter = 0;
+        let counter = 0;
 
-        var drawHeading = function() {
+        // отрисовка заголовка активной секции
+        const drawHeading = function() {
             counter++;
 
             if (counter > header.length) {
@@ -273,21 +275,19 @@ export default class Main extends Component {
                 return;
             }
 
-            // устанавливаем новое значение текста для перерисовки соответствующей секции
+            // устанавливаем новое значение текста для следующей перерисовки заголовка
             this.sectionsHeadings[num] = header.slice(0, counter);
             this.setState({sectionsHeadings: this.sectionsHeadings});
             
-            requestAnimationFrame(drawHeading);
-            
+            requestAnimationFrame(drawHeading);            
         }.bind(this);
 
         // добавляем смену цвета заголовка
         element.classList.add('section__heading_shown');
-        var drawHeadingRequest = requestAnimationFrame(drawHeading);
+        const drawHeadingRequest = requestAnimationFrame(drawHeading);
     }
 
     componentDidMount() {
-
         var aboutItem = document.querySelector('.js-item-about');
         var summaryItem = document.querySelector('.js-item-summary');
         var worksItem = document.querySelector('.js-item-works');
@@ -325,42 +325,53 @@ export default class Main extends Component {
         //console.log('render main');
         const mainClass = 'main ' + (this.props.className ? this.props.className : '');
 
-        var items = [];
-        //var sections = [];
-        var blocks = [];
+        // массив элементов меню
+        const menuItems = [];
+        // массив блоков с информацией
+        const blocks = [];
+
         let itemKey = 0;
         let sectionKey = 0;
         let blockKey = 0;
 
-        this.info.forEach(function(infoElt) {    
-
-            var item = <MenuItem key={itemKey} className = {infoElt.itemName} text = {infoElt.itemText}/>; 
+        this.info.forEach(function(infoItem) {
+            const menuItem = <MenuItem
+                                key={itemKey}
+                                className = {infoItem.itemName}
+                                text = {infoItem.itemText}
+                            />; 
             itemKey++;
+            menuItems.push(menuItem);
 
-            var sections = [];
+            // массив секций в блоке
+            const sections = [];
 
-            infoElt.sections.forEach(function(sectionElt) {
-
-                var section = <Section key={sectionKey} num = {sectionElt.hiddenText.num} hiddenText = {sectionElt.hiddenText.text} heading = {this.state.sectionsHeadings[sectionElt.hiddenText.num]} shownDescription = {sectionElt.shownDescription} hiddenDescription = {sectionElt.hiddenDescription}/>;
+            infoItem.sections.forEach(function(sectionItem) {
+                const section = <Section
+                                    key={sectionKey}
+                                    num = {sectionItem.hiddenText.num}
+                                    hiddenText = {sectionItem.hiddenText.text}
+                                    heading = {this.state.sectionsHeadings[sectionItem.hiddenText.num]}
+                                    shownDescription = {sectionItem.shownDescription}
+                                    hiddenDescription = {sectionItem.hiddenDescription}
+                                />;
                 sectionKey++;
 
                 sections.push(section);
             }.bind(this));
 
-            var block = <div key={blockKey} className = {"main__block " + infoElt.blockName}>
+            var block = <div key={blockKey} className = {"main__block " + infoItem.blockName}>
                             {sections}
                         </div>;
             blockKey++;
 
-            items.push(item);
             blocks.push(block);
-            //sections.push(section);
         }.bind(this));
         
         return (
             <div className = {mainClass}>
                 <div ref={elem => this.menuRef = elem} className = 'menu'>
-                    {items}
+                    {menuItems}
                 </div>
                 <div className = 'main__inner'>         
                     {blocks}
