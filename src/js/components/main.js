@@ -166,28 +166,6 @@ export default class Main extends Component {
 
                                 </div>
 
-                                <div className = 'section__description-heading'>НА C#</div>
-
-                                <div className = 'section__description-inner'>
-
-                                    <div className = 'picture-block'>
-                                        <div className = 'picture-block__heading'>Программа подсчета времени наработки контрольно-проверочной аппаратуры (КПА) и приборов</div>
-
-                                        <div className = 'picture-block__picture'>
-                                            <a href = "https://github.com/e-eki/time_counting_app">
-                                                <div
-                                                    className = 'image image_timer' 
-                                                    alt = 'программа подсчета времени наработки'
-                                                >
-                                                </div>
-                                            </a>
-                                        </div>
-                                    
-                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
-                                    </div>
-
-                                </div>
-
                                 <div className = 'section__description-heading'>НА PYTHON</div>
 
                                 <div className = 'section__description-inner'>
@@ -222,6 +200,28 @@ export default class Main extends Component {
                                         </div>
                                     
                                         <p>Репозиторий тут: <a href = "https://gist.github.com/e-eki/7f11840bd1255f72fee92d776d592f2c">https://gist.github.com/e-eki/7f11840bd1255f72fee92d776d592f2c</a></p>
+                                    </div>
+
+                                </div>
+
+                                <div className = 'section__description-heading'>НА C#</div>
+
+                                <div className = 'section__description-inner'>
+
+                                    <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Программа подсчета времени наработки контрольно-проверочной аппаратуры (КПА) и приборов</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/time_counting_app">
+                                                <div
+                                                    className = 'image image_timer' 
+                                                    alt = 'программа подсчета времени наработки'
+                                                >
+                                                </div>
+                                            </a>
+                                        </div>
+                                    
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
                                     </div>
 
                                 </div>
