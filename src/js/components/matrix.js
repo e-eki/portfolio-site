@@ -318,7 +318,7 @@ export default class Matrix extends Component {
         // или по скроллу
         addEventListener("scroll", this.showContent);
         // или если ничего не происходит, то по таймауту
-        //this.showContentClock = setTimeout(this.showContent, 15000);  //todo!
+        this.showContentClock = setTimeout(this.showContent, 15000);  //todo!
     }
 
     componentDidUpdate(prevProps, prevState) {

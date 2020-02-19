@@ -33,17 +33,20 @@ export default class Main extends Component {
                         shownDescription:
                             <div>
                                 <p>Здравствуйте, меня зовут Виктория Дрёмина.</p>
-                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), а в прошлом разработчик приложений на C#.</p>
+                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), пишу на языках JavaScript, C#, Python.</p>
                                 <p>Здесь вы сможете найти краткое описание моей деятельности и примеры моих работ.</p>
                             </div>
                         ,
                         hiddenDescription: 
                             <div>
-                                <p>В своей работе я использую следующие инструменты разработки сайта: Javascript / HTML(5) / CSS(3) / MongoDB / MySQL.</p> 
-                                <p>Для фронтэнда применяю библиотеку React.js, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для организации стилей применяю принципы БЭМ-методологии. Для сборки использую Webpack. </p> 
-                                <p>А для бэкэнда применяю платформу Node.js, СУБД MongoDB и MySQL. При разработке API использую принципы REST-архитектуры. Для интеграции с соцсетями использую протокол авторизации OAuth 2.0. Знаю (но пока не имею опыта применения на практике) принципы Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
-                                <p></p>
-                                <p>При создании Desktop&#8209;приложений под Windows на языке С# использую: библиотеки Windows Forms / WPF, язык разметки XAML, технологию LINQ. Работаю с платформой .Net Framework 4.6.</p>                 
+                                <p>Стек используемых мною технологий:</p>
+                                <p>Пишу back-end и front-end на JavaScript/TypeScript и C# (ASP.NET).</p>
+                                <p>Для front-end'a применяю ReactJS / Angular 7, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для организации стилей применяю принципы БЭМ-методологии. Для сборки использую Webpack. </p> 
+                                <p>Для back-end'a применяю NodeJS / ASP.NET. Работаю с базами данных: реляционными (PostgreSQL, MySQL) и нереляционными (MongoDB). При разработке API использую принципы REST-архитектуры. Знаю и имею опыт применения на практике принципов Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
+                                
+                                <p>Также знаю Python и имею некоторое представление о применении его в сфере Machine Learning.</p>
+
+                                <p>В далеком прошлом писала desktop&#8209;приложения под Windows на С# с использованием: библиотек Windows Forms / WPF, языка разметки XAML. Работаю с платформой .Net Framework 4.7.</p>                 
                                 <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
                             </div>
                     }
@@ -68,11 +71,24 @@ export default class Main extends Component {
                             </div>
                     },
                     {
-                        hiddenText: {text: 'Повышение квалификации, курсы'},
+                        hiddenText: {
+                            text: 'Повышение квалификации, курсы',
+                            num: null,
+                        },
                         hiddenDescription: 
                             <div>
                                 <p>Учебный центр при МГТУ им. Н.Э.Баумана "Специалист", Курсы Microsoft, 2016г.</p>
                                 <p>Курс М20483: Программирование на C#.</p>
+                            </div>
+                    },
+                    {
+                        hiddenText: {
+                            text: 'Подробное резюме',
+                            num: null,
+                        },
+                        hiddenDescription:
+                            <div>
+                                <p>Размещено <a href="https://hh.ru/applicant/resumes/view?resume=4aed935fff03baf1970039ed1f637630675066">на HeadHunter</a>.</p>
                             </div>
                     }
                 ]
@@ -96,7 +112,6 @@ export default class Main extends Component {
                                 <div className = 'section__description-inner'>
 
                                     <div className = 'picture-block'>
-     
                                         <div className = 'picture-block__heading'>Сайт-портфолио</div>
 
                                         <div className = 'picture-block__picture'>
@@ -104,7 +119,7 @@ export default class Main extends Component {
                                                 <div
                                                     className = 'image image_site' 
                                                     alt = 'сайт-визитка'
-                                                    >
+                                                >
                                                 </div>
                                             </a>
                                         </div>
@@ -114,21 +129,38 @@ export default class Main extends Component {
                                     </div>
 
                                     <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Форум с системой оповещений в реальном времени (гибрид форума и мессенджера)</div>
 
-                                        <div className = 'picture-block__heading'>Игра в шашки</div>
+                                        {/* <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/forum-api">
+                                                <div
+                                                    className = 'image image_checkers' 
+                                                    alt = 'сферический форум в вакууме'
+                                                >
+                                                </div>
+                                            </a>
+                                        </div> */}
+
+                                        <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
+                                        <p>фронтенд <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p>
+                                        {/* <p>Опубликован тут: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p> */}
+                                    </div>
+
+                                    <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Игра в шашки онлайн</div>
 
                                         <div className = 'picture-block__picture'>
                                             <a href = "https://github.com/e-eki/checkers-project">
                                                 <div
                                                     className = 'image image_checkers' 
                                                     alt = 'игра в шашки'
-                                                    >
+                                                >
                                                 </div>
                                             </a>
                                         </div>
 
-                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
-                                        <p><a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
+                                        <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
+                                        <p>фронтенд <a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
                                         <p>Опубликован тут: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
                                     </div>
 
@@ -139,7 +171,6 @@ export default class Main extends Component {
                                 <div className = 'section__description-inner'>
 
                                     <div className = 'picture-block'>
-
                                         <div className = 'picture-block__heading'>Программа подсчета времени наработки контрольно-проверочной аппаратуры (КПА) и приборов</div>
 
                                         <div className = 'picture-block__picture'>
@@ -147,12 +178,50 @@ export default class Main extends Component {
                                                 <div
                                                     className = 'image image_timer' 
                                                     alt = 'программа подсчета времени наработки'
-                                                    >
+                                                >
                                                 </div>
                                             </a>
                                         </div>
                                     
                                         <p>Репозиторий тут: <a href = "https://github.com/e-eki/time_counting_app">https://github.com/e-eki/time_counting_app</a></p>
+                                    </div>
+
+                                </div>
+
+                                <div className = 'section__description-heading'>НА PYTHON</div>
+
+                                <div className = 'section__description-inner'>
+
+                                    <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Десктопное приложение - файловый менеджер</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/file-manager">
+                                                <div
+                                                    className = 'image image_file-manager' 
+                                                    alt = 'файловый менеджер'
+                                                    >
+                                                </div>
+                                            </a>
+                                        </div>
+                                    
+                                        <p>Репозиторий тут: <a href = "https://github.com/e-eki/file-manager">https://github.com/e-eki/file-manager</a></p>
+                                    </div>
+
+                                    <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Краткосрочное прогнозирование курса биткоина (к доллару США)</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://gist.github.com/e-eki/7f11840bd1255f72fee92d776d592f2c">
+                                                <div
+                                                    className = 'image image_bitkoin' 
+                                                    alt = 'краткосрочное прогнозирование курса биткоина'
+                                                    >
+                                                </div>
+                                            </a>
+                                        </div>
+                                    
+                                        <p>Репозиторий тут: <a href = "https://gist.github.com/e-eki/7f11840bd1255f72fee92d776d592f2c">https://gist.github.com/e-eki/7f11840bd1255f72fee92d776d592f2c</a></p>
                                     </div>
 
                                 </div>
@@ -181,8 +250,7 @@ export default class Main extends Component {
                                 <p>Я <a href="https://ru.stackoverflow.com/users/301638/eeki">на Stack Overflow</a> :)</p>
                             </div>
                     }
-                ]
-                
+                ]               
             }
         ];
 

@@ -7,7 +7,7 @@ const initialState = Immutable({
     lettersData: []
 });
 
-export default function MatrixReducer(state = initialState, action) {
+export default function Reducer(state = Map(), action) {
   switch(action.type) {
 
     return state.merge({
