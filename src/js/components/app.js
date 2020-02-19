@@ -1,6 +1,7 @@
+'use strict';
 
 import React, { Component } from 'react';
-import MatrixWrapper from './matrixWrapper';
+import Matrix from './matrix';
 
 export default class App extends Component {
 
@@ -8,7 +9,7 @@ export default class App extends Component {
 
         return (
             <div className = 'page'>
-                <MatrixWrapper height = {this.props.height} width = {this.props.width}/>
+                <Matrix height = {this.props.height} width = {this.props.width}/>
             </div>
         )
     }

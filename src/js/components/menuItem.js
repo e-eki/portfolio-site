@@ -1,3 +1,4 @@
+'use strict';
 
 import React, { Component } from 'react';
 
@@ -5,7 +6,6 @@ export default class MenuItem extends Component {
 
     shouldComponentUpdate(nextProps) {
         //console.log('shouldComponentUpdate item');
-
         return false;
     }
 

@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 
 export default class Logo extends Component {
@@ -17,21 +19,26 @@ export default class Logo extends Component {
     }
 
     turnLogo(event) {
-        var now = (new Date()).getSeconds();
-        var interval = now - this.prevTime;
+        const now = (new Date()).getSeconds();
+        const interval = now - this.prevTime;
         this.prevTime = now;
 
         // чтобы не мельтешило сменой букв
-        if (interval < 1) return;
+        if (interval < 1) {
+            return;
+        }
 
         this.variantNum ++;
-        if (this.variantNum == this.turningVariants.length) this.variantNum = 0;
+
+        if (this.variantNum == this.turningVariants.length) {
+            this.variantNum = 0;
+        }
         
         this.setState({turningVariant: this.turningVariants[this.variantNum]});
     }
 
     componentDidMount() {
-        this.triangle.addEventListener('mousemove', this.turnLogo);
+        this.triangleRef.addEventListener('mousemove', this.turnLogo);
     }
 
     render() {
@@ -41,7 +48,7 @@ export default class Logo extends Component {
         
         return (
             <div className = {logoClass}>
-                <div  ref={elem => this.triangle = elem} className = 'triangle'>
+                <div ref={elem => this.triangleRef = elem} className = 'triangle'>
                     <div className="triangle__side triangle__side_left">{this.state.turningVariant[0]}</div>
                     <div className="triangle__side triangle__side_bottom">{this.state.turningVariant[1]}</div>
                     <div className="triangle__side triangle__side_right">{this.state.turningVariant[2]}</div>           

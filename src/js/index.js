@@ -1,3 +1,4 @@
+'use strict';
 
 import '../less/template.less';
 import React from 'react';
