@@ -46,9 +46,9 @@ export default class Main extends Component {
                                 
                                 <p>Также знаю Python и имею некоторое представление о применении его в сфере Machine Learning.</p>
 
-                                <p>В далеком прошлом писала desktop&#8209;приложения под Windows на С# с использованием: библиотек Windows Forms / WPF, языка разметки XAML.</p>
+                                <p>В далёком прошлом писала desktop&#8209;приложения под Windows на С# с использованием: библиотек Windows Forms / WPF, языка разметки XAML.</p>
                                 <p>Работаю с платформами .Net Framework, .Net Core.</p>                 
-                                <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
+                                <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Учусь новому, постоянно совершенствую свой профессиональный уровень.</p>
                             </div>
                     }
                 ]
@@ -132,15 +132,15 @@ export default class Main extends Component {
                                     <div className = 'picture-block'>
                                         <div className = 'picture-block__heading'>Форум с системой оповещений в реальном времени (гибрид форума и мессенджера)</div>
 
-                                        {/* <div className = 'picture-block__picture'>
+                                        <div className = 'picture-block__picture'>
                                             <a href = "https://github.com/e-eki/forum-api">
                                                 <div
-                                                    className = 'image image_checkers' 
+                                                    className = 'image image_forum' 
                                                     alt = 'сферический форум в вакууме'
                                                 >
                                                 </div>
                                             </a>
-                                        </div> */}
+                                        </div>
 
                                         <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
                                         <p>фронтенд <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p>
