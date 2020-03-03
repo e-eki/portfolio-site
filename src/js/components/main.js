@@ -42,12 +42,13 @@ export default class Main extends Component {
                                 <p>Стек используемых мною технологий:</p>
                                 <p>Пишу back-end и front-end на JavaScript/TypeScript и C# (ASP.NET).</p>
                                 <p>Для front-end'a применяю ReactJS / Angular 7, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для организации стилей применяю принципы БЭМ-методологии. Для сборки использую Webpack. </p> 
-                                <p>Для back-end'a применяю NodeJS / ASP.NET. Работаю с базами данных: реляционными (PostgreSQL, MySQL) и нереляционными (MongoDB). При разработке API использую принципы REST-архитектуры. Знаю и имею опыт применения на практике принципов Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
+                                <p>Для back-end'a применяю NodeJS / ASP.NET Core. Работаю с базами данных: реляционными (PostgreSQL, MySQL) и нереляционными (MongoDB). При разработке API использую принципы REST-архитектуры. Знаю и имею опыт применения на практике принципов Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
                                 
                                 <p>Также знаю Python и имею некоторое представление о применении его в сфере Machine Learning.</p>
 
-                                <p>В далеком прошлом писала desktop&#8209;приложения под Windows на С# с использованием: библиотек Windows Forms / WPF, языка разметки XAML. Работаю с платформой .Net Framework 4.7.</p>                 
-                                <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Легко обучаюсь, постоянно совершенствую свой профессиональный уровень.</p>
+                                <p>В далёком прошлом писала desktop&#8209;приложения под Windows на С# с использованием: библиотек Windows Forms / WPF, языка разметки XAML.</p>
+                                <p>Работаю с платформами .Net Framework, .Net Core.</p>                 
+                                <p>К своей работе отношусь с большой ответственностью, вниманием и вдохновением. Учусь новому, постоянно совершенствую свой профессиональный уровень.</p>
                             </div>
                     }
                 ]
@@ -131,15 +132,15 @@ export default class Main extends Component {
                                     <div className = 'picture-block'>
                                         <div className = 'picture-block__heading'>Форум с системой оповещений в реальном времени (гибрид форума и мессенджера)</div>
 
-                                        {/* <div className = 'picture-block__picture'>
+                                        <div className = 'picture-block__picture'>
                                             <a href = "https://github.com/e-eki/forum-api">
                                                 <div
-                                                    className = 'image image_checkers' 
+                                                    className = 'image image_forum' 
                                                     alt = 'сферический форум в вакууме'
                                                 >
                                                 </div>
                                             </a>
-                                        </div> */}
+                                        </div>
 
                                         <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
                                         <p>фронтенд <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p>
