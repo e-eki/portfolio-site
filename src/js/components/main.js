@@ -33,14 +33,14 @@ export default class Main extends Component {
                         shownDescription:
                             <div>
                                 <p>Здравствуйте, меня зовут Виктория Дрёмина.</p>
-                                <p>Я занимаюсь веб-разработкой (front&#8209;end и back&#8209;end), пишу на языках JavaScript, C#, Python.</p>
+                                <p>Я занимаюсь веб-разработкой (frontend и backend), пишу на языках JavaScript, C#, Python.</p>
                                 <p>Здесь вы сможете найти краткое описание моей деятельности и примеры моих работ.</p>
                             </div>
                         ,
                         hiddenDescription: 
                             <div>
                                 <p>Стек используемых мною технологий:</p>
-                                <p>Пишу back-end и front-end на JavaScript/TypeScript и C# (ASP.NET).</p>
+                                <p>Пишу backend и frontend на JavaScript/TypeScript и C# (ASP.NET).</p>
                                 <p>Для front-end'a применяю ReactJS / Angular 7, препроцессор LESS, владею секретами адаптивной/responsive кроссбраузерной верстки. Для организации стилей применяю принципы БЭМ-методологии. Для сборки использую Webpack. </p> 
                                 <p>Для back-end'a применяю NodeJS / ASP.NET Core. Работаю с базами данных: реляционными (PostgreSQL, MySQL) и нереляционными (MongoDB). При разработке API использую принципы REST-архитектуры. Знаю и имею опыт применения на практике принципов Flux / Redux - архитектуры. Для контроля версий использую Git.</p>  
                                 
