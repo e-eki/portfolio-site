@@ -144,7 +144,7 @@ export default class Main extends Component {
 
                                         <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
                                         <p>фронтенд <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p>
-                                        {/* <p>Опубликован тут: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p> */}
+                                        <p>Опубликован тут: <a href = "https://forum-messenger.herokuapp.com">https://forum-messenger.herokuapp.com</a></p>
                                     </div>
 
                                     <div className = 'picture-block'>
