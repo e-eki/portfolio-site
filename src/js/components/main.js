@@ -142,9 +142,46 @@ export default class Main extends Component {
                                             </a>
                                         </div>
 
-                                        <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
-                                        <p>фронтенд <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p>
+                                        <p>Репозитории тут: Backend <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
+                                        <p>Frontend <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p>
                                         <p>Опубликован тут: <a href = "https://forum-messenger.herokuapp.com">https://forum-messenger.herokuapp.com</a></p>
+                                    </div>
+
+                                    <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Форум о походах по северу (пример имплементации форума-мессенджера выше)</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://snow-trekking-forum.herokuapp.com">
+                                                <div
+                                                    className = 'image image_trekking-forum' 
+                                                    alt = 'форум о походах по северу'
+                                                >
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        {/* <p>Репозитории тут: Backend <a href = "https://github.com/e-eki/forum-api">https://github.com/e-eki/forum-api</a> ,</p>
+                                        <p>Frontend <a href = "https://github.com/e-eki/forum-app">https://github.com/e-eki/forum-app</a></p> */}
+                                        <p>Backend и Frontend идентичны форуму выше, за исключением стилей.</p>
+                                        <p>Опубликован тут: <a href = "https://snow-trekking-forum.herokuapp.com">https://snow-trekking-forum.herokuapp.com</a></p>
+                                    </div>
+
+                                    <div className = 'picture-block'>
+                                        <div className = 'picture-block__heading'>Сайт о походах по северу</div>
+
+                                        <div className = 'picture-block__picture'>
+                                            <a href = "https://github.com/e-eki/trekking-site-api">
+                                                <div
+                                                    className = 'image image_trekking-site' 
+                                                    alt = 'сайт о походах по северу'
+                                                >
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <p>Репозитории тут: Backend <a href = "https://github.com/e-eki/trekking-site-api">https://github.com/e-eki/trekking-site-api</a> ,</p>
+                                        <p>Frontend <a href = "https://github.com/e-eki/trekking-site-app">https://github.com/e-eki/trekking-site-app</a></p>
+                                        <p>Опубликован тут: <a href = "https://snow-trekking-site.herokuapp.com">https://snow-trekking-site.herokuapp.com</a></p>
                                     </div>
 
                                     <div className = 'picture-block'>
@@ -160,8 +197,8 @@ export default class Main extends Component {
                                             </a>
                                         </div>
 
-                                        <p>Репозитории тут: бэкенд <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
-                                        <p>фронтенд <a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
+                                        <p>Репозитории тут: Backend <a href = "https://github.com/e-eki/checkers-project">https://github.com/e-eki/checkers-project</a> ,</p>
+                                        <p>Frontend <a href = "https://github.com/e-eki/checkers-app">https://github.com/e-eki/checkers-app</a></p>
                                         <p>Опубликован тут: <a href = "https://checkers-game0.herokuapp.com/">https://checkers-game0.herokuapp.com/</a></p>
                                     </div>
 
